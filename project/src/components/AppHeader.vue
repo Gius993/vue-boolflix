@@ -6,6 +6,7 @@
 			</div>
 
 			<div class="ricerca">
+				<button>Cerca</button>
 				<input type="text">
 			</div>
 		</div>
@@ -34,11 +35,16 @@ export default {
 			
 		}
 		.ricerca{
-			
+			display: flex;
+			align-items: center;
 			input{
 				width: 15vw;
 				height: 40px;
 				font-size: 40px;
+			}
+			button{
+				width: 100px;
+				height: 40px;
 			}
 		}
 		
