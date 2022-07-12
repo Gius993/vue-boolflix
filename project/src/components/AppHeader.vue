@@ -36,9 +36,10 @@ export default {
 		.ricerca{
 			
 			input{
-				width: 10vw;
+				width: 15vw;
 				height: 40px;
 				font-size: 40px;
 			}
 		}
+		
 </style>
