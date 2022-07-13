@@ -10,7 +10,7 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
   import axios from "axios";
   import AppHeader from './components/AppHeader.vue';
   import AppMain from './components/AppMain.vue'
@@ -56,7 +56,7 @@ export default {
         api_key: this.apiKey,
         query: searchText,
         language: 'it-IT'
-      }
+      },
     };
     this.getMovies(paramsObj);
   }
