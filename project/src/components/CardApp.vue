@@ -4,7 +4,10 @@
 	<div class="card">
 		<!-- <img src="https://mr.comingsoon.it/imgdb/serietv/serie/1947/1947.jpg" alt="prova">		 -->
 		<h2>titolo: {{item.title}}</h2>
-		<p>Lingua: {{ item.original_language }} </p>
+		<!-- <p>Lingua: {{ item.original_language }} </p> -->
+		<div>
+			<img :src="../assets/img/${lingua}" alt="">
+		</div>
 		<p>Voto:{{ item.vote_average }}</p>
 	</div>
 	<!-- <div class="card-hov">
