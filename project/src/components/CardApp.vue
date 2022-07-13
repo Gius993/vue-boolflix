@@ -36,7 +36,7 @@ export default {
 <style scoped lang="scss">
 	/*eslint-disable*/
 	.card{
-		width: calc(100% / 3 - 200px);
+		
 		color: white;
 		background-color: black;
 	

@@ -21,7 +21,7 @@ export default {
         "movieCards": Array,
         "searching": Boolean
     },
-    componets: {
+    components: {
         CardApp
     }
  };

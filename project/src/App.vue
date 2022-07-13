@@ -28,7 +28,7 @@ export default {
   },
   data: function(){
     return{
-      apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=4961c6668a6a7f12b27a2f288b02c0eb&quary=&language=it-IT',
+      apiUrl: 'https://api.themoviedb.org/3/search/',
       apiKey: '4961c6668a6a7f12b27a2f288b02c0eb',
       movies:[],
       series:[],

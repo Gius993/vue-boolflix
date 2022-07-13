@@ -8,6 +8,7 @@
 			<div class="ricerca">
 				<button @click="$emit('performSearch', inputText)">Cerca</button>
 				<input type="text"
+				v-model="inputText"
 				@keyup.enter="$emit('performSearch', inputText)"
 				>
 			</div>
