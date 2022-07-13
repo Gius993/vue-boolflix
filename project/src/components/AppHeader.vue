@@ -6,8 +6,10 @@
 			</div>
 
 			<div class="ricerca">
-				<button>Cerca</button>
-				<input type="text">
+				<button @click="$emit('performSearch', inputText)">Cerca</button>
+				<input type="text"
+				@keyup.enter="$emit('performSearch', inputText)"
+				>
 			</div>
 		</div>
   </div>
@@ -16,7 +18,11 @@
 <script>
 export default {
   name: 'AppHeader',
-
+	data: function(){
+		return{
+			inputText: ''
+		}
+	}	
 }
 </script>
 
