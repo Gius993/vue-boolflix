@@ -12,9 +12,6 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
   import axios from "axios";
- 
-
-
   import AppHeader from './components/AppHeader.vue';
   import AppMain from './components/AppMain.vue'
 export default {
@@ -31,7 +28,7 @@ export default {
   },
   data: function(){
     return{
-      apiUrl: 'https://api.themoviedb.org/3/search/',
+      apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=4961c6668a6a7f12b27a2f288b02c0eb&quary=&language=it-IT',
       apiKey: '4961c6668a6a7f12b27a2f288b02c0eb',
       movies:[],
       series:[],
@@ -56,8 +53,8 @@ export default {
   search: function (searchText){
     const paramsObj = {
       params:{
-        api_key: this.apyKey,
-        quary: searchText,
+        api_key: this.apiKey,
+        query: searchText,
         language: 'it-IT'
       }
     };

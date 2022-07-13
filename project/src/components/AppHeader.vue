@@ -23,7 +23,7 @@ export default {
 			inputText: ''
 		}
 	}	
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
