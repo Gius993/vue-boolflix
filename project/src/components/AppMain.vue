@@ -64,6 +64,7 @@ export default {
 	}
 	.serie{
 		margin-top: 50px;
+		margin-bottom: 50px;
 	}
 
 </style>
