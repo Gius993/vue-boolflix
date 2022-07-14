@@ -1,7 +1,7 @@
 <template>
 <!-- eslint-disable -->
 	<div>
-		<h2 class="title-main">Originali</h2>
+		<h2 class="title-main">Originali </h2>
 		<div class="main-container" v-if="movieCards.length">				
 			<div class="list-title">
 				<CardApp
