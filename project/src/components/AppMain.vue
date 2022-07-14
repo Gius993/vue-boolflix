@@ -10,7 +10,7 @@
 				/>	
 				
 			</div>
-			<div class="list-title">
+			<div class="list-title serie">
 				
 				<CardApp
 				v-for="card in seriesCards"
@@ -44,9 +44,7 @@ export default {
 <style scoped lang="scss">
 
 	@import "../assets/style/variables.scss";
-	.main-container{
-		width: 100vw;
-		padding: 200px;
+	.main-container{	
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -54,7 +52,10 @@ export default {
 	.list-title{
 		margin-top: 200px;
 		display: flex;
-		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		overflow-x: auto;
 	}
+
 
 </style>
