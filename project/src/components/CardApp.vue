@@ -16,14 +16,14 @@
 				<img v-if="flagArray.includes(item.original_language)" :src="require(`../assets/img/${item.original_language}.png`)" :alt="language">
 				<span v-else>{{ item.original_language }}</span>
 				<!-- <div>Voto:{{ item.vote_average }}</div> -->
-				<div class="voto">
-					Voto:
-					<i  v-for="n in starVote(item.vote_average)" :key="n" class="fas fa-star"></i>
-					<i v-for="n in 5 - starVote(item.vote_average)" :key="n" class="far fa-star"></i>
-				</div> 
 
 				<!-- {{ starVote(item.vote_average) }} -->
 			</div>
+				<div class="voto">
+					<span>Voto:</span>
+					<i  v-for="n in starVote(item.vote_average)" :key="n" class="fas fa-star"></i>
+					<i v-for="n in 5 - starVote(item.vote_average)" :key="n" class="far fa-star"></i>
+				</div> 
 
 		</div>
 
