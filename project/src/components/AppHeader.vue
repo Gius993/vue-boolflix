@@ -12,8 +12,7 @@
 					<li><a href="#">Originali</a></li>
 					<li><a href="#">Aggiunti di recente</a></li>
 					<li><a href="#">La mia lista</a></li>
-					
-					
+										
 				</ul>
 			</div>
 			<div class="ricerca">
@@ -65,6 +64,7 @@ export default {
 				width: 100px;
 				height: 40px;
 				background-color: red;
+				border: 1px solid white;
 			}
 		}
 		.list{

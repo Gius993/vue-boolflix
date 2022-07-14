@@ -1,6 +1,7 @@
 <template>
 <!-- eslint-disable -->
 	<div>
+		<h2 class="title-main">Originali</h2>
 		<div class="main-container" v-if="movieCards.length">				
 			<div class="list-title">
 				<CardApp
@@ -49,13 +50,20 @@ export default {
 		flex-direction: column;
 		justify-content: space-around;
 	}
+	.title-main{
+		color: white;
+		text-align: start;
+		font-size: 80px;
+		margin: 50px;
+	}
 	.list-title{
-		margin-top: 200px;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
 		overflow-x: auto;
 	}
-
+	.serie{
+		margin-top: 50px;
+	}
 
 </style>

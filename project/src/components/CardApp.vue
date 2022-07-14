@@ -59,6 +59,9 @@ export default {
 	}
 	.flag{
 		width: 40px;
+		img{
+			height: auto;
+		}
 	}
 	.locandina{
 		width: 400px;
@@ -67,26 +70,14 @@ export default {
 		background-color: black;
 		display: none;
 	}
-	.informazioni:hover{
-		display: block;
-	}
-	.locandina:hover{
-		img{
-
-			display: none;
-		}
-	}
-	// .card:hover{
-	// 	display: none;
-	// }
-	// .card-hov{
-	// 	display: none;
-	// }
-	// .card-hov:hover {
-	// 	width: calc(100% / 3 - 200px);
-	// 	height: 500px;
+	// .informazioni:hover{
 	// 	display: block;
-	// 	background-color: black;
-	// 	color: white;
 	// }
+	// .locandina:hover{
+	// 	img{
+
+	// 		display: none;
+	// 	}
+	// }
+
 </style>
