@@ -3,20 +3,16 @@
   <div>
 	<div class="card">
 		<!-- <img src="https://mr.comingsoon.it/imgdb/serietv/serie/1947/1947.jpg" alt="prova">		 -->
-		<h2>titolo: {{item.title}}</h2>
-		<!-- <p>Lingua: {{ item.original_language }} </p> -->
+		<h2 v-if="item.title">titolo: {{item.title}}</h2>
+		<h2 v-else>titolo: {{item.name}}</h2>
+		
 		<div class="flag">
-			<img v-if="flagArray.includes(item.original_language)" :src="`../assets/img/${item.original_language}.jpg`" >
+			Lingua:
+			<img v-if="flagArray.includes(item.original_language)" :src="require(`../assets/img/${item.original_language}.png`)" :alt="language">
 			<span v-else>{{ item.original_language }}</span>
 		</div>
 		<p>Voto:{{ item.vote_average }}</p>
 	</div>
-	<!-- <div class="card-hov">
-		<h2>titolo</h2>
-		<h2>titolo originale</h2>
-		<p>Lingua</p>
-		<p>voto</p>
-	</div> -->
 		
   </div>
 </template>
@@ -26,7 +22,7 @@ export default {
  	 name: 'CardApp',
 	 data:function (){
 		return{
-			flagArray: ["it", "en"]
+			flagArray: ['it', 'en']
 		};
 	 },
 	 props:{

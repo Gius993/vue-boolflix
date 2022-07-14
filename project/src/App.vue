@@ -3,6 +3,7 @@
       <AppHeader @performSearch="search" />
       <AppMain
       :movieCards="movies"
+      :seriesCards="series"
       :searching="searchStarted"
       />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -26,6 +27,7 @@ export default {
       return [...this.movies];
     }
   },
+  //array
   data: function(){
     return{
       apiUrl: 'https://api.themoviedb.org/3/search/',
@@ -36,20 +38,33 @@ export default {
       searchStarted: false
     }
   },
+  //funzioni serie e film
   methods:{
     getMovies(apiParams){
       axios
        .get(this.apiUrl + 'movie', apiParams)
        .then((response) =>{
         this.movies = response.data.results;
-        this.allResults = [...this.movies];
+        // this.allResults = [...this.movies];
+        this.searchStarted = true;
+       })
+ 
+    },
+    getSeries(apiParams){
+      axios
+       .get(this.apiUrl + 'tv', apiParams)
+       .then((response) =>{
+        this.series = response.data.results;
+        // this.allResults = [...this.series];
         this.searchStarted = true;
        })
        .catch((error) =>{
         console.log("Errore", error);
-       }
+       }    
        );
+       
     },
+    
   search: function (searchText){
     const paramsObj = {
       params:{
@@ -58,7 +73,9 @@ export default {
         language: 'it-IT'
       },
     };
+    //chiamata api
     this.getMovies(paramsObj);
+    this.getSeries(paramsObj);
   }
   }
 };

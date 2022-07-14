@@ -2,11 +2,22 @@
 <!-- eslint-disable -->
 	<div>
 		<div class="main-container" v-if="movieCards.length">				
-			<CardApp
-            v-for="card in movieCards"
-            :key="card.id"
-            :item="card"
-            />			
+			<div class="list-title">
+				<CardApp
+				v-for="card in movieCards"
+				:key="card.id"
+				:item="card"
+				/>	
+				
+			</div>
+			<div class="list-title">
+				
+				<CardApp
+				v-for="card in seriesCards"
+				:key="card.id"
+				:item="card"
+				/>			
+			</div>
 		</div>
 	</div>
 </template>
@@ -19,6 +30,7 @@ export default {
     name: "AppMain",
     props: {
         "movieCards": Array,
+		"seriesCards": Array,
         "searching": Boolean
     },
     components: {
@@ -36,7 +48,13 @@ export default {
 		width: 100vw;
 		padding: 200px;
 		display: flex;
+		flex-direction: column;
 		justify-content: space-around;
+	}
+	.list-title{
+		margin-top: 200px;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 </style>
