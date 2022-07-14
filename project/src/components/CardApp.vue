@@ -21,8 +21,8 @@
 			</div>
 				<div class="voto">
 					<span>Voto:</span>
-					<i  v-for="n in starVote(item.vote_average)" :key="n" class="fas fa-star"></i>
-					<i v-for="n in 5 - starVote(item.vote_average)" :key="n" class="far fa-star"></i>
+				<i v-for="n in starVote(item.vote_average)" :key="`star-full${n}`" class="fas fa-star"></i>
+				<i v-for="n in 5 - starVote(item.vote_average)" :key="`star-empty${n}`" class="far fa-star"></i> 
 				</div> 
 
 		</div>
