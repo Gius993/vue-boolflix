@@ -5,13 +5,17 @@
 		<!-- <img src="https://mr.comingsoon.it/imgdb/serietv/serie/1947/1947.jpg" alt="prova">		 -->
 		<h2 v-if="item.title">titolo: {{item.title}}</h2>
 		<h2 v-else>titolo: {{item.name}}</h2>
-		
+		<div class="locandina">
+			<img :src="`https://image.tmdb.org/t/p/w500${item.poster_path}`" alt="locandina">
+		</div>
 		<div class="flag">
 			Lingua:
 			<img v-if="flagArray.includes(item.original_language)" :src="require(`../assets/img/${item.original_language}.png`)" :alt="language">
 			<span v-else>{{ item.original_language }}</span>
 		</div>
-		<p>Voto:{{ item.vote_average }}</p>
+		<!-- <div>Voto:{{ item.vote_average }}</div> -->
+		<div>Voto stelle:{{ starVote(item.vote_average) }}</div>
+
 	</div>
 		
   </div>
@@ -24,6 +28,12 @@ export default {
 		return{
 			flagArray: ['it', 'en']
 		};
+	 },
+	 methods:{
+		starVote(vote_star){
+			const voteStars = Math.cell(vote_star);
+			// return voteStars / 2;
+		}
 	 },
 	 props:{
 		"item": Object
@@ -45,7 +55,9 @@ export default {
 	.flag{
 		width: 40px;
 	}
-
+	.locandina{
+		width: 400px;
+	}
 	// .card:hover{
 	// 	display: none;
 	// }
