@@ -5,8 +5,9 @@
 		<!-- <img src="https://mr.comingsoon.it/imgdb/serietv/serie/1947/1947.jpg" alt="prova">		 -->
 		<h2>titolo: {{item.title}}</h2>
 		<!-- <p>Lingua: {{ item.original_language }} </p> -->
-		<div>
-			<img :src="../assets/img/${lingua}" alt="">
+		<div class="flag">
+			<img v-if="flagArray.includes(item.original_language)" :src="`../assets/img/${item.original_language}.jpg`" >
+			<span v-else>{{ item.original_language }}</span>
 		</div>
 		<p>Voto:{{ item.vote_average }}</p>
 	</div>
@@ -25,7 +26,7 @@ export default {
  	 name: 'CardApp',
 	 data:function (){
 		return{
-
+			flagArray: ["it", "en"]
 		};
 	 },
 	 props:{
@@ -44,6 +45,9 @@ export default {
 		color: white;
 		background-color: black;
 	
+	}
+	.flag{
+		width: 40px;
 	}
 
 	// .card:hover{
